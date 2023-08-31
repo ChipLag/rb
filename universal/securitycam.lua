@@ -167,7 +167,7 @@
                                                                                                  while game.Players.LocalPlayer.Character.Humanoid.Health < 0.75 do
                                                                                                   wait(0.5)
                                                                                                  end
-                                                                                                 wait(1.75)
+                                                                                                 wait(2.75)
                                                                                                  sj = game.Players.LocalPlayer.Character.Humanoid
                                                                                                end)
                                                                                                	prev.MouseButton1Down:Connect(function()
