@@ -1,3 +1,4 @@
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/ChipLag/rb/main/universal/securitycam.lua",true))()
 -- Gui to Lua
 -- Made By ChipLag
  

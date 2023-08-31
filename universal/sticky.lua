@@ -1,3 +1,4 @@
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/ChipLag/rb/main/universal/sticky.lua",true))()
 --Made With GUI2Lua
 --Made by Chiplag
 
