@@ -1,4 +1,5 @@
---loadstring Will Be Here
+--loadstring:
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/ChipLag/rb/main/hub.lua",true))() 
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
 local Window = Library.CreateLib("ChipLag Hub", "DarkTheme")
 
