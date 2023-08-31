@@ -136,7 +136,7 @@
               ADDCAM.TextWrapped = true
                
                -- Scripts:
-                
+              
                 local function IDORMWB_fake_script() -- Security.Script 
                 	local script = Instance.new('LocalScript', Security)
                      
@@ -163,7 +163,13 @@
                                                                                         	end
                                                                                              
                                                                                               
-                                                                                               
+                                                                                               game.Players.LocalPlayer.Character.Humanoid.Died:Connect(function()
+                                                                                                 while game.Players.LocalPlayer.Humanoid.Health < 0.5 do
+                                                                                                  wait(0.5)
+                                                                                                 end
+                                                                                                 wait(1.75)
+                                                                                                 sj = game.Players.LocalPlayer.Humanoid
+                                                                                               end)
                                                                                                	prev.MouseButton1Down:Connect(function()
                                                                                                 		cur = cur-1
                                                                                                         		if cur < 1 then
