@@ -95,14 +95,14 @@
             
             VIEWCAM.Name = "VIEWCAM"
             VIEWCAM.Parent = Security
-            VIEWCAM.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+            VIEWCAM.BackgroundColor3 = Color3.fromRGB(255,255,255)
             VIEWCAM.BorderColor3 = Color3.fromRGB(0, 0, 0)
             VIEWCAM.BorderSizePixel = 2
             VIEWCAM.Position = UDim2.new(0.400000006, 0, 0.949999988-0.1, 0)
             VIEWCAM.Size = UDim2.new(0.100000001, 0, 0.0500000007, 0)
             VIEWCAM.Font = Enum.Font.SourceSans
             VIEWCAM.Text = "VIEW"
-            VIEWCAM.TextColor3 = Color3.fromRGB(255, 255, 255)
+            VIEWCAM.TextColor3 = Color3.fromRGB(0,0,0)
             VIEWCAM.TextScaled = true
             VIEWCAM.TextSize = 14.000
             VIEWCAM.TextWrapped = true
