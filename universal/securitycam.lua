@@ -17,7 +17,7 @@
   --Properties:
    
    Security.Name = "Security"
-   Security.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+   Security.Parent = game.CoreGui
    Security.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     
      
@@ -43,7 +43,7 @@
         CAMID.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         CAMID.BorderColor3 = Color3.fromRGB(0, 0, 0)
         CAMID.BorderSizePixel = 2
-        CAMID.Position = UDim2.new(0.449999988, 0, 0.899999976, 0)
+        CAMID.Position = UDim2.new(0.449999988, 0, 0.899999976-0.1, 0)
         CAMID.Size = UDim2.new(0.100000001, 0, 0.0500000007, 0)
         CAMID.Font = Enum.Font.SourceSans
         CAMID.TextColor3 = Color3.fromRGB(0, 0, 0)
@@ -56,7 +56,7 @@
          NEXTCAM.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
          NEXTCAM.BorderColor3 = Color3.fromRGB(0, 0, 0)
          NEXTCAM.BorderSizePixel = 2
-         NEXTCAM.Position = UDim2.new(0.550000012, 0, 0.899999976, 0)
+         NEXTCAM.Position = UDim2.new(0.550000012, 0, 0.899999976-0.1, 0)
          NEXTCAM.Size = UDim2.new(0.0500000007, 0, 0.0500000007, 0)
          NEXTCAM.Font = Enum.Font.SourceSans
          NEXTCAM.Text = ">"
@@ -70,7 +70,7 @@
           PLACE.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
           PLACE.BorderColor3 = Color3.fromRGB(0, 0, 0)
           PLACE.BorderSizePixel = 2
-          PLACE.Position = UDim2.new(0.5, 0, 0.949999988, 0)
+          PLACE.Position = UDim2.new(0.5, 0, 0.949999988-0.1, 0)
           PLACE.Size = UDim2.new(0.100000001, 0, 0.0500000007, 0)
           PLACE.Font = Enum.Font.SourceSans
           PLACE.Text = "PLACE HERE"
@@ -84,7 +84,7 @@
            PREVCAM.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
            PREVCAM.BorderColor3 = Color3.fromRGB(0, 0, 0)
            PREVCAM.BorderSizePixel = 2
-           PREVCAM.Position = UDim2.new(0.400000006, 0, 0.899999976, 0)
+           PREVCAM.Position = UDim2.new(0.400000006, 0, 0.899999976-0.1, 0)
            PREVCAM.Size = UDim2.new(0.0500000007, 0, 0.0500000007, 0)
            PREVCAM.Font = Enum.Font.SourceSans
            PREVCAM.Text = "<"
@@ -98,7 +98,7 @@
             VIEWCAM.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
             VIEWCAM.BorderColor3 = Color3.fromRGB(0, 0, 0)
             VIEWCAM.BorderSizePixel = 2
-            VIEWCAM.Position = UDim2.new(0.400000006, 0, 0.949999988, 0)
+            VIEWCAM.Position = UDim2.new(0.400000006, 0, 0.949999988-0.1, 0)
             VIEWCAM.Size = UDim2.new(0.100000001, 0, 0.0500000007, 0)
             VIEWCAM.Font = Enum.Font.SourceSans
             VIEWCAM.Text = "VIEW"
@@ -112,7 +112,7 @@
              REMCAM.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
              REMCAM.BorderColor3 = Color3.fromRGB(0, 0, 0)
              REMCAM.BorderSizePixel = 2
-             REMCAM.Position = UDim2.new(0.349999994, 0, 0.949999988, 0)
+             REMCAM.Position = UDim2.new(0.349999994, 0, 0.949999988-0.1, 0)
              REMCAM.Size = UDim2.new(0.0500000007, 0, 0.0500000007, 0)
              REMCAM.Font = Enum.Font.SourceSans
              REMCAM.Text = "-"
@@ -126,7 +126,7 @@
               ADDCAM.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
               ADDCAM.BorderColor3 = Color3.fromRGB(0, 0, 0)
               ADDCAM.BorderSizePixel = 2
-              ADDCAM.Position = UDim2.new(0.600000024, 0, 0.949999988, 0)
+              ADDCAM.Position = UDim2.new(0.600000024, 0, 0.949999988-0.1, 0)
               ADDCAM.Size = UDim2.new(0.0500000007, 0, 0.0500000007, 0)
               ADDCAM.Font = Enum.Font.SourceSans
               ADDCAM.Text = "+"
