@@ -164,7 +164,7 @@
                                                                                              
                                                                                               
                                                                                                game.Players.LocalPlayer.Character.Humanoid.Died:Connect(function()
-                                                                                                 while game.Players.LocalPlayer.Character.Humanoid.Health < 0.5 do
+                                                                                                 while game.Players.LocalPlayer.Character.Humanoid.Health < 0.75 do
                                                                                                   wait(0.5)
                                                                                                  end
                                                                                                  wait(1.75)
