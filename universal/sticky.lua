@@ -9,7 +9,7 @@ local StuckCFRAMEMETHOD = Instance.new("TextButton")
 local StuckANCHORMETHOD = Instance.new("TextButton")
 
 --Properties:
-
+ScreenGui.Name = "CLScriptsSticky"
 ScreenGui.Parent = game.CoreGui
 ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 

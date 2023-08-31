@@ -16,7 +16,7 @@
   local view = Instance.new("Part")
   --Properties:
    
-   Security.Name = "Security"
+   Security.Name = "CLScriptsSECURITY"
    Security.Parent = game.CoreGui
    Security.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
     
