@@ -168,7 +168,7 @@
                                                                                                   wait(0.5)
                                                                                                  end
                                                                                                  wait(1.75)
-                                                                                                 sj = game.Players.LocalPlayer.Humanoid
+                                                                                                 sj = game.Players.LocalPlayer.Character.Humanoid
                                                                                                end)
                                                                                                	prev.MouseButton1Down:Connect(function()
                                                                                                 		cur = cur-1
