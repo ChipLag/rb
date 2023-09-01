@@ -12,7 +12,9 @@ uUniversal:NewButton("StickyScript", "Make yourself stuck at a postition", funct
     uUniversal:NewButton("Security Cameras", "Script for Security Cameras to spy on people", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ChipLag/rb/main/universal/securitycam.lua",true))()
         end)
-
+        uUniversal:NewButton("Simple Infinite Jump", "Its just a Part Glued to your foot with a delay so you can fall", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ChipLag/rb/main/universal/simpleinfjump.lua",true))()
+end) 
         local uUseful = universal:NewSection("USEFUL UNIVERSAL SCRIPTS NOT BY ME")
         uUseful:NewButton("Nameless Admin", "Nameless Admin", function()
             loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))() 
