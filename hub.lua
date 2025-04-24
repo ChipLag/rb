@@ -1,6 +1,7 @@
 --loadstring:
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/ChipLag/rb/main/hub.lua",true))() 
-local Library = loadstring(game:HttpGet("https://pastebin.com/raw/vff1bQ9F"))() 
+--Uses Kavo UI Library
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-Ui-Library/main/source.lua"))() 
 local Window = Library.CreateLib("ChipLag Hub", "DarkTheme")
 
 --Universal
