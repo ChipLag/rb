@@ -2,7 +2,9 @@
 print("Loading...")
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
 
-local gui = Library:create( Theme = Library.Themes.Serika )
+local gui = Library:create{
+    Theme = Library.Themes.Serika
+}
 
 local tabUniversal = gui:tab{
     Name = "Universal"
