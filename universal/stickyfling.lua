@@ -266,6 +266,7 @@ KillDoButton.MouseButton1Click:Connect(function()
 	doTarget = nil
 end)
 
+local lastFf = 0
 
 conn = game.RunService.Heartbeat:Connect(function(deltaTime: number) 
 	-- Reset the saved CFrame so that the player ends up at wherever they should spawn
@@ -293,7 +294,15 @@ conn = game.RunService.Heartbeat:Connect(function(deltaTime: number)
 
 	-- Move CFrame by the player's input
 	savedFrame = savedFrame + dir * speed * deltaTime
-	
+
+	if lastFf ~= _G.flingForce then
+		game.StarterGui:SetCore("SendNotification",{
+			Title = "FlyFling",
+			Text = tostring(lastFf) .. " is now " .. _G.flingForce,
+			Duration = 2.5
+		})
+		lastFf = _G.flingForce
+	end
 	
 	if doTarget ~= nil then
 		root.CFrame = doTarget.Character.HumanoidRootPart.CFrame
