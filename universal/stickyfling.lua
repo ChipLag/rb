@@ -2,7 +2,7 @@
 
 _G.flingForce = 2500
 -- Gui to Lua
--- Version: 3.2
+-- Version: 3.2^
 
 -- Instances:
 
@@ -186,11 +186,12 @@ UICorner_9.Parent = MoveDownButton
 local savedFrame = nil
 
 local speed = 5
-
+local conn = nil
 
 StopScriptButton.MouseButton1Click:Connect(function() 
-	script:Destroy()
+	--script:Destroy()
 	ScreenGui:Destroy()	
+	conn:Disconnect()
 end)
 
 MoveDownButton.MouseButton1Click:Connect(function()
@@ -266,7 +267,7 @@ KillDoButton.MouseButton1Click:Connect(function()
 end)
 
 
-game.RunService.Heartbeat:Connect(function(deltaTime: number) 
+conn = game.RunService.Heartbeat:Connect(function(deltaTime: number) 
 	-- Reset the saved CFrame so that the player ends up at wherever they should spawn
 	local chr = game.Players.LocalPlayer.Character
 	if chr == nil then
