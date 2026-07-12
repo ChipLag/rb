@@ -1,3 +1,5 @@
 # Chiplag Scripts
 
-## Scripts from my Videos
+```lua
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ChipLag/rb/main/hub.lua",true))()
+```
