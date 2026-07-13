@@ -308,8 +308,8 @@ MapTab:CreateButton({
 	end
 })
 
-MapTab:CreateButton({
-	Name = "Anti-Black Hole",
+MapTab:CreateToggle({
+	Name = "Anti - Black Hole",
 	Callback = function(Value)
 		antibh = Value
 	end
