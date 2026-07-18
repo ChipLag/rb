@@ -1,3 +1,4 @@
+-- THIS DOES NOT WORK YET!!!!
 --loadstring(game:HttpGet("https://raw.githubusercontent.com/ChipLag/rb/main/hubv2.lua",true))() 
 print("Loading...")
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/deeeity/mercury-lib/master/src.lua"))()
