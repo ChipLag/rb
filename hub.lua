@@ -7,9 +7,12 @@ local Window = Library.CreateLib("ChipLag Hub", "DarkTheme")
 --Universal
 local universal = Window:NewTab("Universal")
 local uUniversal = universal:NewSection("UNIVERSAL SCRIPTS")
-uUniversal:NewButton("[NEW] AdmFreeze", "Detect Frozen Roblox Admin Players!", function()
+uUniversal:NewButton("AdmFreeze", "Detect Frozen Roblox Admin Players!", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ChipLag/rb/main/universal/Admfreeze.lua",true))() 
 end) 
+uUniversal:NewButton("Cartride Fling", "Fling Cheaters in Cart Ride Games!", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/ChipLag/rb/main/universal/CartRideFling.lua",true))()
+end)
 --[[uUniversal:NewButton("[NEW] RbEChat", "Chat with other Exploiters!", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/ChipLag/rb/main/universal/rbechat.lua",true))() 
 end)]]
