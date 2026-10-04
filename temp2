@@ -1,0 +1,90 @@
+local RyLog = _G.RyLog or loadstring(game:HttpGet("https://raw.githubusercontent.com/Ryvora/FOSS/refs/heads/main/RyLog.luau"))()
+
+function log(v)
+  if RyLog then RyLog.push(v, {timeout=0.1}) end
+end
+
+local Player = game:GetService("Players").LocalPlayer
+
+function getTeam()
+  local plrTeam = Player.TeamColor
+  for i,v in pairs(game:GetService("Workspace"):FindFirstChild("Tycoons"):FindFirstChild("Tycoons"):GetChildren()) do
+    if not v:FindFirstChild("TeamColor") then continue end
+    if v:FindFirstChild("TeamColor").Value == plrTeam then
+      --log("Team: " .. v.Name)
+      return v
+    end
+  end
+end
+
+function touch(v)
+ firetouchinterest(v, Player.Character.HumanoidRootPart, 0)
+ firetouchinterest(v, Player.Character.HumanoidRootPart, 1)
+end
+
+getTeam()
+
+function collect()
+  local team = getTeam()
+  local giver = team.Essentials.Giver
+  
+  firetouchinterest(giver, Player.Character.HumanoidRootPart, 0)
+
+  firetouchinterest(giver, Player.Character.HumanoidRootPart, 1)
+end
+
+function upgrade()
+  local team = getTeam()
+  for _, v in pairs(team:FindFirstChild("Buttons"):GetChildren()) do
+    if v.Head.Transparency == 1 then continue end
+    log(v.Name .. v.Price.Value)
+    if v.Price.Value <= parseCash() then
+      log("ok")
+      touch(v.Head)
+    end
+  end
+end
+
+
+function getPartCollector()
+  for i,v in pairs(getTeam().Essentials:GetChildren()) do
+    if v.Name == "PartCollector" and v.Transparency == 0 then return v end -- At least one will return
+  end
+end
+
+function parseCash()
+  local cashString = tostring(Player.leaderstats.Cash.Value)
+  return parseShorthand(cashString)
+end
+
+function parseShorthand(str)
+  str = str:gsub("%+", ""):gsub(",", ""):gsub("%s", "") -- remove +, commas, spaces
+  local num, suffix = str:match("^([%d%.]+)([KkMmBbTt]?)$")
+  if not num then return tonumber(str) or 0 end
+  num = tonumber(num)
+  suffix = suffix:upper()
+  local multipliers = {
+    K = 1e3,
+    M = 1e6,
+    B = 1e9,
+    T = 1e12,
+  }
+  return math.floor(num * (multipliers[suffix] or 1))
+end
+
+local prevPos = {}
+
+function stealParts()
+  for i,v in pairs(game.Workspace.PartStorage:GetChildren()) do
+   if not prevPos[v] then prevPos[v] = v.CFrame end
+   Player.Character.HumanoidRootPart.CFrame = prevPos[v]
+   v.CFrame = getPartCollector().CFrame
+   firetouchinterest(getPartCollector(), v, false)
+   firetouchinterest(getPartCollector(), v, true)
+  end
+end
+
+
+if not _G.egg then
+_G.egg = game.RunService.Heartbeat:Connect(stealParts)
+end
